@@ -1,0 +1,13 @@
+Create Package within Maven Src/Test/Java: com.guru99.framework
+Create Interface within Package: Guru99WebDriver
+Create Class within Package: Guru99WebDriverImpl
+Create String Method within Guru99WebDriverImpl Class: OSDetector
+Declare in Interface: void init(String Browser);
+Create Init Method in Class: public void init(String Browser)
+Update selenium.properties file with Guru99 information
+Create Class: Guru99WebDriverFactory
+Create Class in Class that implements Interface: public Boolean navigateTo(final String urlString)
+Create method in Interface: Boolean navigateTo(final String relativeURL)
+Create examples.pages package with Class: Guru99HomePage
+Create method in Guru99HomePage class: setWebDriver(Guru99WebDriverImpl webDriver)
+Create and add tests in log4j.properties file

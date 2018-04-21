@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Group of group Suite]">
+  <parameter name="BrowserName" value="firefox"/>
+  <parameter name="firstName" value="Benjamin"/>
+  <parameter name="lastName" value="Lee"/>
+  <parameter name="sUsername" value="bendangerous@gmail.com"/>
+  <parameter name="email" value="bendangerous@gmail.com"/>
+  <parameter name="sPassword" value="hi"/>
+  <test name="FBLoginTest(failed)" preserve-order="true">
+    <parameter name="BrowserName" value="firefox"/>
+    <parameter name="firstName" value="Benjamin"/>
+    <parameter name="lastName" value="Lee"/>
+    <parameter name="sUsername" value="bendangerous@gmail.com"/>
+    <parameter name="email" value="bendangerous@gmail.com"/>
+    <parameter name="sPassword" value="hi"/>
+    <classes>
+      <class name="com.facebook.tests.FBTestHomePage">
+        <methods>
+          <include name="testNewAccountFields"/>
+          <include name="setUp"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>
