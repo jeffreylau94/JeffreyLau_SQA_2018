@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Group of group Suite" verbose="1">
+
+	<!--   <parameter name="BrowserName" value= "chrome" />
+	<test name="SimpleParamExample">
+		<classes>
+			<class name="com.facebook.tests.TestHomePage">
+				<methods>
+					<include name="testFaceBookTitleOnPageLoad" />
+				</methods>
+			</class>
+		</classes>
+	</test> -->
+	
+	
+	<test name="FBLoginTest">
+	<parameter name="BrowserName" value= "firefox" />
+	<parameter name="sUsername" value= "bendangerous@gmail.com" />
+	<parameter name="sPassword" value= "hi" />
+	<parameter name="firstName" value= "Benjamin" />
+	<parameter name="lastName" value= "Lee" />
+	<parameter name="email" value= "bendangerous@gmail.com" />
+		<classes>
+			<class name="com.facebook.tests.FBTestHomePage">
+				<methods>
+					<include name="testFaceBookTitleOnPageLoad" />
+					<include name="testUserLogin" />
+					<include name="verifyTextforSignUp" />
+					<include name="verifyConnectwithFriendsText" />
+					<include name="verifyForgotAccountLink" />
+					<include name="testNewAccountFields" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<!-- 
+	<test name="YelpLoginTest">
+	<parameter name="BrowserName" value= "firefox" />
+	<parameter name="sUsername" value= "hi@gmail.com" />
+	<parameter name="sPassword" value= "hi" />
+		<classes>
+			<class name="com.yelp.tests.YelpTestHomePage">
+				<methods>
+					<include name="testYelpTitleOnPageLoad" />
+					<include name="testYelpUserLogin" />
+				</methods>
+			</class>
+		</classes>
+	</test>  
+	
+	<test name="YelpSignUpTest">
+	<parameter name="BrowserName" value= "firefox" />
+	<parameter name="FirstName" value= "Revo" />
+	<parameter name="LastName" value= "Max" />
+	<parameter name="Email" value= "revomax@gmail.com" />
+	<parameter name="ZipCode" value= "12345" />
+		<classes>
+			<class name="com.yelp.tests.YelpTestHomePage">
+				<methods>
+					<include name="testYelpTitleOnPageLoad" />
+					<include name="testYelpUserLogin" />
+					<include name="testYelpSignUp" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="Guru99Test">
+	<parameter name="BrowserName" value= "firefox" />
+		<classes>
+			<class name="com.guru99.tests.Test99GuruHomePage">
+				<methods>
+					<include name="test_Home_Page_DashBoard_UserName" />
+					<include name="testGenerateAccessText" />
+				</methods>
+			</class>
+		</classes>
+	</test>   
+
+	<test name="GoogleHomePageTest">
+		<parameter name="BrowserName" value= "chrome" />
+			<classes>
+				<class name="com.google.pages.GoogleHomePage"> </class>
+			</classes>
+	</test> -->
+
+</suite>
