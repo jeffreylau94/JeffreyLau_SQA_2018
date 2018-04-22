@@ -73,7 +73,22 @@ public class Guru99WebDriverImpl implements Guru99WebDriver {
 		// Browser");
 		System.out.println("END:The webDriver Init Method");
 	}
-	
+
+	public String OSDetector() {
+		String os = System.getProperty("os.name").toLowerCase();
+		if (os.contains("win")) {
+			return "Windows";
+		} else if (os.contains("nux") || os.contains("nix")) {
+			return "Linux";
+		} else if (os.contains("mac")) {
+			return "Mac";
+		} else if (os.contains("sunos")) {
+			return "Solaris";
+		} else {
+			return "Other";
+		}
+	}
+
 	@Override
 	public Boolean navigateTo(final String urlString) {
 		Boolean mainPageFound = false;
@@ -93,7 +108,6 @@ public class Guru99WebDriverImpl implements Guru99WebDriver {
 				mainPageFound = true;
 			// Log.info("END: The navigateTo Method ");
 		} catch (Exception e) {
-
 			e.printStackTrace();
 			return false;
 		}
@@ -105,8 +119,12 @@ public class Guru99WebDriverImpl implements Guru99WebDriver {
 		return currentUrl;
 	}
 	
-	public WebElement findElements(By element) {
-		return driver.findElement(element);
+	public WebDriver getDriverInstance() {
+		return driver;
+	}
+
+	public List<WebElement> findElements(By element) {
+		return driver.findElements(element);
 	}
 
 	public String getElementText(By element) {
@@ -120,8 +138,8 @@ public class Guru99WebDriverImpl implements Guru99WebDriver {
 		}
 		return null;
 	}
-	
-	public WebElement FindElement(By element) {
+
+	public WebElement FindElements(By element) {
 		System.out.println(" Coming in Find Element");
 		// WebDriverWait wait = new WebDriverWait(driver, 10);
 		// WebElement clickableElement =
@@ -143,11 +161,11 @@ public class Guru99WebDriverImpl implements Guru99WebDriver {
 
 	@Override
 	public void clickElement(WebElement element) {
-		System.out.println("START: click Element value "+element);
+		System.out.println("START: click Element value " + element);
 		WebDriverWait wait = new WebDriverWait(driver, 15);
 		try {
-	        //System.out.println("The element is " +element.getText());
-	        //Wait.someSec(GlobalDataStore.WAIT_TIME);
+			// System.out.println("The element is " +element.getText());
+			// Wait.someSec(GlobalDataStore.WAIT_TIME);
 			WebElement clickableElement = wait.until(ExpectedConditions.elementToBeClickable(element));
 			clickableElement.click();
 		} catch (StaleElementReferenceException e) {
@@ -168,11 +186,11 @@ public class Guru99WebDriverImpl implements Guru99WebDriver {
 			this.driver = null;
 		}
 	}
-	
-	/*@Override
-	public void closeBrowser() {
-		System.out.println("Closing Browser");
-		this.driver.close();
-	}*/
+
+	@Override
+	public WebElement FindElement(By element) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }
